@@ -10,7 +10,7 @@ EPISODE-3=>
   run console.log(global) for node.js and you are able to see the superPowers.
 - global is not the part of V8 engine.It is one of the super power which is provided by the Node.js.
 
-- so in the case of NOde.js 'This' is an empty Object.
+- so in the case of Node.js 'This' is an empty Object.
   console.log(this)->empty object
 
 - there are so conflict for this global object because every browser has its own global object and have different-different name so open js foundation comes with a name which is (globalThis) to remove this conflict and now we can refer globalThis as an global object everywhere.
