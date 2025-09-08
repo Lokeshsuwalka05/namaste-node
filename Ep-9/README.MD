@@ -19,7 +19,7 @@ In this lecture, we are going to **deep dive into Libuv** — what it does and h
 ## 🌀 Event Loop in Detail
 
 - The **Event Loop** is the heart of Node.js async execution.
-- It has **4 major phases**, and before each phase, a **priority cycle (microtask queue)** is executed.
+- It has **6 major phases**, and before each phase, a **priority cycle (microtask queue)** is executed.
 - Each phase has its **own queue of callbacks**.
 
 ### ⚡ How the Event Loop Works
@@ -34,17 +34,27 @@ In this lecture, we are going to **deep dive into Libuv** — what it does and h
 
    - Executes callbacks scheduled by `setTimeout()` and `setInterval()`.
 
-3. **Poll Phase**
+3. **Pending Callbacks Phase**
+
+   - Executes I/O callbacks deferred to the next loop iteration.
+   - Example: system-level operations like TCP errors.
+
+4. **Idle, Prepare Phase**
+
+   - Used internally by Node.js for preparing the event loop.
+   - Not generally used directly by developers.
+
+5. **Poll Phase**
 
    - Fetches new I/O events (like file read/write, network).
    - Executes I/O-related callbacks.
    - In **Node.js**, if there is nothing left to do, the event loop **waits in the poll phase** (unlike browsers, where it keeps running).
 
-4. **Check Phase**
+6. **Check Phase**
 
    - Executes callbacks scheduled by `setImmediate()`.
 
-5. **Close Callbacks Phase**
+7. **Close Callbacks Phase**
    - Executes callbacks when a resource (like socket/handle/stream) is closed.
    - Example:
      ```js
