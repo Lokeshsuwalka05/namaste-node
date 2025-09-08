@@ -4,6 +4,10 @@ In this lecture, we are going to **deep dive into Libuv** — what it does and h
 
 ---
 
+## All the non-blocking I/O and asynchronous tasks in Node.js are handled by Libuv. Internally, Libuv uses the event loop, thread pool, and callback queue.
+
+---
+
 ## 🔑 Libuv Has 3 Main Parts
 
 1. **Event Loop** → Checks whether the call stack is empty or not.
