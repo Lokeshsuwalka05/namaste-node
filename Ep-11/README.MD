@@ -140,4 +140,38 @@ The **event loop** handles asynchronous operations in Node.js. It has multiple p
 
 ---
 
-✅ This covers: **Server basics, TCP/IP communication, multiple servers, sockets vs WebSockets, and the Node.js event loop (including Close phase).**
+## 🔹 Creating Servers in Node.js
+
+- We can create servers using Node.js by using the **http module**, but it can become complicated for large apps.
+- That’s why we use **Express.js**, which is built on top of Node.js, and makes server creation easier.
+
+---
+
+## 🔹 Different Meanings of the Word “Server”
+
+1. **Hardware Server**
+
+   - A physical computer machine designed to serve many clients.
+   - Has more RAM, CPU cores, storage, and high network capacity.
+   - Example: Dell, HP, IBM machines in data centers.
+   - **Purpose**: Handle multiple client requests.
+
+2. **Software Server**
+
+   - A program/application that acts as a server.
+   - Examples:
+     - Apache / Nginx → Web servers
+     - MySQL / PostgreSQL → Database servers
+     - Node.js `http` module
+   - **Purpose**: Accept requests and send responses.
+
+3. **Application Server**
+   - A server designed to run applications for specific purposes.
+   - Examples:
+     - Tomcat → Runs Java apps
+     - Express.js app → Runs Node.js applications
+     - Spring Boot → Runs enterprise Java apps
+
+---
+
+✅ This covers: **Server basics, TCP/IP communication, multiple servers, sockets vs WebSockets, Node.js event loop, and types of servers (hardware/software/application).**
