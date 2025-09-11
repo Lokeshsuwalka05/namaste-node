@@ -8,7 +8,7 @@ EPISODE-3=>
 - Node.js is also have a global object which is known as global itself.
   it gives us some feature which is in Browser.
   run console.log(global) for node.js and you are able to see the superPowers.
-- global is not the part of V8 engine.It is one of the super power which is provided by the Node.js.
+- Global is not the part of V8 engine.It is one of the super power which is provided by the Node.js.
 
 - so in the case of Node.js 'This' is an empty Object.
   console.log(this)->empty object
