@@ -1,2 +1,0 @@
-- made a connection string by using mongoDB.
-- 
