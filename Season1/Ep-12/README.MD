@@ -1,0 +1,4 @@
+- Database is a organized collection of data based on the use of dbms.
+- dbms is basically a layer which is present between the end user and the database.with the help of this layer we are able to capture and analyze our database basically we can perform crud operation on it.
+- there are so many database->refer image 2 of assets
+- Read About Sql vs NoSql=>which covers in images.Go to asset folder.

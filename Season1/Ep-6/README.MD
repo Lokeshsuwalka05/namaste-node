@@ -1,0 +1,4 @@
+- Node.js has an event driven architecture capable of asynchoronous I/O.
+- Node.js is asynchoronous because of LIBUV(Unicorn logo).
+- whenever the async operation happens v8 engine offloads all the operation to the LIBUV and then LIBUV which is our superHero connects with the opearating system by using its super power.
+- LiBUV is like a gennie to V8 engine whenever there is async task it offloads the async task to LIBUV.
