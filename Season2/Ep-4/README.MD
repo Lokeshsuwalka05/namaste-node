@@ -4,6 +4,94 @@ In this episode, we explored **routing in Express.js** — how to handle request
 
 ---
 
+## 🚦 What is Routing?
+
+**Routing** in web development means **deciding how your server responds when a client (browser, mobile app, etc.) makes a request to a specific URL (path + method).**
+
+👉 In short:
+
+- **Client** → makes a request (`GET /users`)
+- **Server** → uses **routes** to check _"for this URL & method, which handler should run?"_
+
+### 🔹 Example in Express
+
+```js
+const express = require("express");
+const app = express();
+
+// Home route
+app.get("/", (req, res) => {
+  res.send("Welcome to Homepage 🚀");
+});
+
+// About route
+app.get("/about", (req, res) => {
+  res.send("About Page 📝");
+});
+
+// POST route (for submitting data)
+app.post("/login", (req, res) => {
+  res.send("Login Request Received ✅");
+});
+
+app.listen(3000, () => {
+  console.log("Server running on port 3000");
+});
+```
+
+Here:
+
+- `GET /` → homepage
+- `GET /about` → about page
+- `POST /login` → handles login
+
+### 🔹 Types of Routing
+
+1. **Static Routing** → Fixed URLs (`/about`, `/contact`)
+2. **Dynamic Routing** → URL has variables (`/users/:id`)
+   - Example: `/users/101` or `/users/102`
+   - You can read `req.params.id` in Express.
+3. **Query Params** → Extra info in URL (`/search?keyword=nodejs&page=2`)
+
+## 🛣️ Route Handler (Concise)
+
+A **route handler** is the **function that runs when a specific route is matched**. It **processes the request** and **sends a response**.
+
+Examples:
+
+**1. Inline (anonymous) handler**
+
+```js
+app.get("/about", (req, res) => {
+  res.send("About Page");
+});
+```
+
+**2. Named function**
+
+```js
+function aboutHandler(req, res) {
+  res.send("About Page");
+}
+app.get("/about", aboutHandler);
+```
+
+**3. Multiple handlers (middleware chain)**
+
+```js
+app.get("/user", validateUser, fetchUser, (req, res) => {
+  res.send(req.user);
+});
+```
+
+✅ **Key points:**
+
+- Any function that **receives** `req` and `res` and handles the request is a **route handler**.
+- Can be **inline, named, or multiple in sequence**.
+- Think: **Route = address**, **Route Handler = chef preparing the response 🍴**
+
+---
+
 ## 🔹 Order of Route Handlers Matters
 
 - Express evaluates routes **top to bottom**.
