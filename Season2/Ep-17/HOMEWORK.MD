@@ -1,0 +1,14 @@
+- YOU should not be able to access other routes without login
+- If token is not present redirect user to login page.
+- Logout feature
+- profile feature and also profile preview kind of a thing
+- Get the feed and add the feed in the store.
+- Build the user card on feed.
+- Edit profile feature
+- and when save show a toast.
+- New Page-to see all my connections
+- New Page-to see all my connections request.
+- Feature- Accept/Reject connection request.
+- send ignore/interested request to the the user card on the feed.
+- signup new user
+- E2E testing

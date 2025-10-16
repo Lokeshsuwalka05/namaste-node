@@ -1,0 +1,10 @@
+- create a vite+react application
+- Remove unnecessary code and create a hello world app
+- Install tailwind css
+- Install daisy UI
+- Add navBar components to App.jsx
+- create a navbar separate component file
+- installed react-router-dom
+- create browser router>Routes>Route=/ Body >Route children.
+- create an outler in your body component.
+- create a footer in your body component.
