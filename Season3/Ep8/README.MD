@@ -48,5 +48,5 @@ Backend → join room → confirm setup
 
 Frontend → emit("sendMessage") → Backend
 Backend → emit("messageReceived") to room → Frontend
-Frontend → display message in chat window where developer can chat
+Frontend → display message in chat window where developers can chat
 ```
