@@ -8,6 +8,20 @@ In this lecture, we are going to **deep dive into Libuv** — what it does and h
 
 ---
 
+##👉 Node.js does not wait for tasks like file reading, API calls, or database queries to finish.
+
+👉 It:
+
+1.Starts the task
+
+2.Registers a callback
+
+3.Continues executing other code
+
+4.When the task finishes (event occurs)
+
+5.The event loop runs the callback
+
 ## 🔑 Libuv Has 3 Main Parts
 
 1. **Event Loop** → Checks whether the call stack is empty or not.
